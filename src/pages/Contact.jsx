@@ -123,10 +123,16 @@ export const Contact = () => {
                 </div>
               </div>
               
-              <div className="mt-4 rounded-2xl overflow-hidden border border-[var(--border)] bg-slate-500/5 aspect-video flex flex-col items-center justify-center gap-2">
-                <MapPin size={36} className="text-[var(--border)]" />
-                <span className="text-xs text-[var(--muted)]">Lahore, Pakistan 54300</span>
-              </div>
+<div className="relative mt-4 rounded-2xl overflow-hidden border border-[var(--border)] aspect-video">
+  <iframe
+    src="https://maps.google.com/maps?q=31.5204,74.3587&z=13&output=embed"
+    className="w-full h-full border-0"
+  ></iframe>
+
+  <div className="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-3 py-1 rounded-lg">
+    📍 Lahore, Pakistan
+  </div>
+</div>
             </AnimatedSection>
 
             <AnimatedSection delay={0.2} className="lg:col-span-2">
